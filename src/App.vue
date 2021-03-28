@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- Navbar on top of each view -->
+  <Navbar />
+  <!-- Get current view -->
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Get Navbar
+import Navbar from "./components/Navbar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Navbar,
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
+/* Get Spartan font */
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+/* Root formatting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Establish font */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Spartan, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
