@@ -62,7 +62,7 @@ export default {
     },
   },
   mounted() {
-    if (window.innerWidth <= 428) this.mobile = true;
+    if (window.innerWidth <= 650) this.mobile = true;
   },
 };
 </script>
@@ -79,7 +79,7 @@ export default {
   color: white;
   background-color: rgba(255, 105, 180, 0.85);
   // Overlay styling
-  z-index: 999;
+  z-index: 11;
   position: fixed;
   width: 100%;
   // Bottom outline
@@ -129,15 +129,16 @@ export default {
     }
 
     li {
+      // Get rid of bullets
       list-style: none;
-
+      // Space links out
       a {
         padding: 1.65rem 1rem;
         display: block;
         color: white;
         text-decoration: none;
       }
-
+      // Hover background
       &:hover {
         background-color: $primary-light;
       }
@@ -162,6 +163,7 @@ export default {
       border-color: white;
 
       ul {
+        // Dropdown links
         width: 100%;
         flex-direction: column;
       }

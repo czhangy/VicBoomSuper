@@ -1,37 +1,60 @@
 <template>
   <div id="videos">
-    Videos
-    <div class="selection">hi</div>
     <div class="player">
-      <video width="320" height="240" controls>
+      <video controls>
         <source src="../assets/videos/test.mp4" />
         Video not found
       </video>
+    </div>
+    <div class="carousel">
+      <Carousel />
     </div>
   </div>
 </template>
 
 <script>
+// Get slider
+import Carousel from "../components/Videos/Carousel";
+
 export default {
   name: "Videos",
+  components: {
+    Carousel,
+  },
+  data() {
+    return {
+      videos: ["temp", "temp", "temp"],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.videos {
-  display: flex;
-  flex-direction: row;
+#videos {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 
-  .selection {
-    height: 100%;
-    width: 50%;
-    background-color: $primary;
-  }
+  background-color: $accent;
 
   .player {
-    height: 100vh;
-    width: 50vw;
-    background-color: $primary-light;
+    // Sizing
+    width: 100%;
+    height: 80%;
+    // Position children
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid white;
+
+    video {
+      // Border decoration
+      box-shadow: 0px 0px 30px $accent-dark;
+      height: 70%;
+    }
+  }
+  .carousel {
+    width: 100%;
   }
 }
 </style>
