@@ -6,9 +6,9 @@
         Video not found
       </video>
     </div>
-    <div class="carousel">
+    <!-- <div class="carousel">
       <Carousel />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -34,14 +34,14 @@ export default {
   position: relative;
   width: 100vw;
   height: 100vh;
-
+  overflow: hidden;
   background-color: $accent;
 
   .player {
     // Sizing
     width: 100%;
-    height: 80%;
-    // Position children
+    height: 100%;
+    // Positn children
     display: flex;
     justify-content: center;
     align-items: center;
