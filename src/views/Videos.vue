@@ -2,7 +2,7 @@
   <div id="videos">
     <div class="player">
       <video controls>
-        
+        <source src="../assets/videos/test.mp4" />
         Video not found
       </video>
     </div>
