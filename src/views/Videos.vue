@@ -41,7 +41,7 @@ export default {
     // Sizing
     width: 100%;
     height: 100%;
-    // Positn children
+    // Position children
     display: flex;
     justify-content: center;
     align-items: center;
